@@ -1,0 +1,54 @@
+
+
+
+.ctn-home{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;   
+    justify-content: space-around;
+    align-items: center;
+}
+.ctn-logo{
+    height: 550px;
+    width: 350px;
+}
+
+.ctn-logo img{
+    width: 100%;
+    height: 100%;
+}
+.ctn-info{
+    height: 550px;
+    width: 350px;
+}
+
+
+.cls-button-comprar{
+    margin-top: 10px;
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: #31B404;
+    color: aliceblue;
+    border: solid 2px 013ADF;  
+    text-decoration: none;
+    
+}
+
+
+.cls-button-vender{
+    margin-top: 10px;
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: #31B404;
+    color: aliceblue;
+    border: solid 2px 013ADF;  
+    text-decoration: none;
+    
+}

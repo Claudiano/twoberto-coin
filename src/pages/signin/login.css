@@ -21,6 +21,14 @@
 .ctn-form{
     height: 550px;
     width: 350px;
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctn-form a{
+    margin-top: 20px;
 }
 
 .cls-input{
@@ -31,10 +39,11 @@
     text-transform: lowercase;
     padding: 5px;
     font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .cls-button{
-    margin-top: 10px;
     height: 40px;
     width: 250px;
     border-radius: 5px;
@@ -44,5 +53,7 @@
     color: aliceblue;
     border: solid 2px 013ADF;  
     text-decoration: none;
+
+    text-align: center;
     
 }
