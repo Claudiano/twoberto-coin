@@ -1,0 +1,59 @@
+
+
+
+.ctn-login{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;   
+    justify-content: space-around;
+    align-items: center;
+}
+.ctn-logo{
+    height: 550px;
+    width: 350px;
+}
+
+.ctn-logo img{
+    width: 100%;
+    height: 100%;
+}
+.ctn-form{
+    height: 550px;
+    width: 350px;
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctn-form a{
+    margin-top: 20px;
+}
+
+.cls-input{
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    border: solid 1px;
+    text-transform: lowercase;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cls-button{
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: #31B404;
+    color: aliceblue;
+    border: solid 2px 013ADF;  
+    text-decoration: none;
+
+    text-align: center;
+    
+}

@@ -3,13 +3,13 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import { isAuthenticated } from "./services/auth";
 import Login from './pages/signin/login';
-import Home from './pages/home/Home';
 import Signup from './pages/signup/Signup';
+import Dashboard from './pages/home/Home';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render ={ props =>
+    render={props =>
       isAuthenticated() ? (
         <Component {...props} />
       ) : (
@@ -23,7 +23,7 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Login} />
-      <Route path="/home" component={Home} />
+      <PrivateRoute path="/app" component={Dashboard} />
       <Route path="/signup" component={Signup} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>

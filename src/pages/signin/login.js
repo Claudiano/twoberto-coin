@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { Link, withRouter } from "react-router-dom";
+import api from "../../services/api";
+import { login } from "../../services/auth";
 
 import './login.css';
 import coin from '../../assets/images/coin.jpeg';
@@ -18,13 +19,16 @@ class Login extends Component {
             console.log("aqui 1")
         } else {
             try {
-            //const response = await api.post("/sessions", { email, password });
-            // login(response.data.token);
+            const response = await api.post("/usuarios", { email, password });
+            login(response.data.token);
+            this.props.history.push("/app");
+            /*
             if(this.state.email === "teste@gmail.com" && this.state.password === "123"){
-                this.props.history.push("/home");
+                this.props.history.push("/app");
             } else {
                 alert("Registro nao encontrado, verifique email e senha")
             }
+            */
             } catch (err) {
             this.setState({
                 error:

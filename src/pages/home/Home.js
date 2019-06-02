@@ -5,7 +5,7 @@ import './home.css';
 import coin from '../../assets/images/coin.jpeg';
 
 
-class Home extends Component{
+class Dashboard extends Component{
     
     saldo = 0;
 
@@ -67,5 +67,5 @@ class Home extends Component{
     }
 }
 
-export default Home;
+export default Dashboard;
 
