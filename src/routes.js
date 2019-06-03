@@ -23,7 +23,7 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Login} />
-      <PrivateRoute path="/app" component={Dashboard} />
+      <Route path="/app" component={Dashboard} />
       <Route path="/signup" component={Signup} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>

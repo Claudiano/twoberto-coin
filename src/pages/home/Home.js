@@ -5,18 +5,24 @@ import './home.css';
 import coin from '../../assets/images/coin.jpeg';
 
 
+
 class Dashboard extends Component{
-    
-    saldo = 0;
+    saldo = 0
+    constructor(props){
+        super(props)
+        const usuario = this.props.location.state.usuario
+        this.state = {
+            email: usuario.email,
+            nome: usuario.nome,
+            valorVender: 0,
+            valorComprar: 0,
+            
+            
+        };
+        this.saldo = usuario.saldo
+        console.log()
+    }
 
-    state = {
-        email: "",
-        nome: "Twoberto",
-        valorVender: 0,
-        valorComprar: 0
-
-    
-    };
 
     comprarCoin(){
         if ( Number.parseFloat(this.state.valorComprar) <= 0 || this.state.valorComprar === NaN ){
@@ -28,7 +34,7 @@ class Dashboard extends Component{
     }
 
     venderCoins(){
-        if(Number.parseFloat(this.saldo) <= 0 || this.saldo < this.state.saldo){
+        if(Number.parseFloat(this.saldo) <= 0 || this.saldo < this.state.valorVender){
             alert("você não possui saldo para essa operação")
         } else if ( Number.parseFloat(this.state.valorVender) <= 0 || this.state.valorVender === NaN ){
             alert("Valor inválido")
@@ -47,20 +53,20 @@ class Dashboard extends Component{
             </div>
             <div className="ctn-info">
                 <h2>Usuario: {this.state.nome}</h2>
-                <h1>Saldo de Twoberto coins</h1>
+                
                 <p>Saldo: R$ {this.saldo}</p>
 
                 <input className="cls-input" 
                     placeholder="Valor coins" 
                     type="number"  
                     onChange={e => this.setState({ valorVender: e.target.value }) }/>
-                <button className="cls-button-vender" onClick={() => this.venderCoins()} >vender</button>
+                <button className="cls-button" onClick={() => this.venderCoins()} >vender</button>
 
                 <input className="cls-input" 
                     placeholder="Valor coins" 
                     type="number"  
                     onChange={e => this.setState({ valorComprar: e.target.value }) }/>
-                <button className="cls-button-comprar" onClick={() => this.comprarCoin()}>comprar</button>
+                <button className="cls-button" onClick={() => this.comprarCoin()}>comprar</button>
             </div>
         </div>
     )

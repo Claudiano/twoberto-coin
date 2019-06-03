@@ -19,16 +19,26 @@ class Login extends Component {
             console.log("aqui 1")
         } else {
             try {
-            const response = await api.post("/usuarios", { email, password });
-            login(response.data.token);
-            this.props.history.push("/app");
-            /*
+                // usuario para teste
+                const usuario = {
+                    email: "teste@email",
+                    nome: "Twoberto",
+                    senha: "String",
+                    role: "ADMIN",
+                    saldo: 9999.5
+                }
+                console.log("tentando logar")
+            //const response = api.post("/usuarios", { email, password });
+            //console.log("resposta: " + response)
+            //login(response.data.token);
+            //this.props.history.push("/app");
+            
             if(this.state.email === "teste@gmail.com" && this.state.password === "123"){
-                this.props.history.push("/app");
+                this.props.history.push("/app", {usuario: usuario});
             } else {
                 alert("Registro nao encontrado, verifique email e senha")
             }
-            */
+            
             } catch (err) {
             this.setState({
                 error:

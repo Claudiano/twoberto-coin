@@ -13,6 +13,7 @@ class Signup extends Component{
        }
 
        cadastrarUsuario = () => {
+             
         const usuario = {
             email: String,
             nome: String,
@@ -37,12 +38,12 @@ class Signup extends Component{
                 usuario.email = this.state.email;
                 usuario.senha = this.state.senha;
 
-                await api.post("/usuarios", {usuario});
+                api.post("/usuarios", {usuario});
                 
                 console.log("usuario cadastrado");
                 console.log(this.usuario);
                 this.props.history.push("/");
-                // enviar dados para o backend
+                
             } catch (error) {
                 console.log(error)
                 alert("Ocorreu o erro: " + error)
